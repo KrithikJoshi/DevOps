@@ -1,5 +1,5 @@
 - hosts: all
   tasks:
-    - package: "name=ansible-core  state=present"
-    - copy: "src=/etc/ansible/hosts  dest=/etc/ansible"
+    - package: "name=httpd  state=present"
+    - copy: "src=index.html  dest=/var/www/html"
     - service: "name=httpd  state=started"
