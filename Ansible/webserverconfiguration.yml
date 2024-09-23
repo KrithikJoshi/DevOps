@@ -1,0 +1,27 @@
+- hosts: all
+  vars:
+    - webpage: "index.html"
+    - documentDir: "/var/www/kj"
+    - packageName: "httpd"
+
+  tasks:
+    - package:
+        name: "{{ packageName }}"
+        state: present
+
+    - file:
+        state: directory
+        path: "{{ documentDir }}"
+
+    - copy:
+        dest: "{{ /etc/httpd/conf.d/my.conf }}"
+        content: "documentroot {{ documentDir }}"
+
+    - copy:
+        src: "{{ webpage }}"
+        dest: "{{ documentDir }}"
+
+    - service:
+        name: "{{ packageName }}"
+        state: reloaded
+        enabled: true
