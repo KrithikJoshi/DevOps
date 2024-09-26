@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+  - service:
+      name: docker
+      state: started
+
+  - name: Pull an image
+    community.docker.docker_image:
+      name: krithik2018/firefox:v1
+      source: pull
+
