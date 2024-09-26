@@ -1,0 +1,34 @@
+- name: "Docker container"
+  hosts: all
+  tasks:
+    - service:
+      name: docker
+      state: present
+
+    - name: start the service
+        name: docker
+        state: started
+
+    - name: "Pull image from docker hub"
+      community.docker.docker_image:
+        name: "krithik2018/firefox:v1"
+        source: pull
+        state: present
+        timeout: 120
+
+
+    - name: "Launching container"
+      docker_container:
+        name: "my-apache-container"
+        image: "krithik2018/firefox:v1"
+        state: present
+        labels:
+          Environment: "testing"
+        restart_policy: always
+        volumes:
+          - "/data"
+      register: output
+
+    - name: "inside docker"
+      debug:
+        var: output
