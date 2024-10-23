@@ -55,3 +55,42 @@ kubectl get pods
    59  kubectl describe pods
    60  clear
    61  history
+   //more about labels and selectors
+    5  vim label1.myl
+    6  vim label1.yml
+    7  kubectl create -f label1.yml 
+    8  kubectl get pods
+    9  vim label2.yml
+   10  cat label2.yml 
+   11  vim label2.yml
+   12  kubectl create -f label2.yml
+   13  kubectl get pods
+   14  kubectl get pods --show-label
+   15  kubectl get pods --show-labels
+   16  vim label3.yml
+   17  cat label3
+   18  cat label3.yml 
+   21  kubectl create -f label3.yml 
+   22  vim label3.yml
+   23  kubectl create -f label3.yml 
+   24  clear
+   25  kubectl get pods --show-labels
+   26  kubectl get pods --selector "dc=USA"
+   27  kubectl get pods --selector "dc=USA" --show-labels
+   28  kubectl get pods --selector "dc=IN" --show-labels
+   29  kubectl get pods --selector "team=team1" --show-labels
+   30  kubectl get pods --selector "team=team1,dc=IN" --show-labels
+   31  kubectl get pods --selector "team=team1,dc=USA" --show-labels
+   32  kubectl get pods --selector "team=team1,dc!=USA" --show-labels
+   33  kubectl get pods --selector "dc in IN --show-labels
+   34  kubectl get pods --selector "dc in IN" --show-labels
+   35  kubectl get pods --selector "dc in (IN)" --show-labels
+   36  kubectl get pods --selector "dc in (USA)" --show-labels
+   37  kubectl get pods --selector "dc in (IN,USA)" --show-labels
+   41  kubectl get pods --selector "dc notin (IN,USA)" --show-labels
+   42  kubectl get pods --selector "dc notin (team1)" --show-labels
+   43  kubectl get pods --selector "team notin (team1)" --show-labels
+   44  kubectl get pods --l "team notin (team1)" --show-labels
+   45  kubectl get pod --l "team notin (team1)" --show-labels
+   46  kubectl get pod -l "team notin (team1)" --show-labels
+   47  kubectl get pod -l "team in (team1)" --show-labels
