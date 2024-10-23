@@ -1,0 +1,57 @@
+kubectl get pods
+    6  ls
+    7  cd /
+    8  ls
+    9  cd /etc/
+   10  ls
+   11  getenforce
+   12  firewall
+   13  systemctl status firewalld
+   14  systemctl status firewall
+   15  clear
+   16  vim first_code.yml
+   17  kubectl create -f first_code.yml 
+   18  kubectl get pods
+   19  kubectl status
+   20  kubectl cluster-info
+   21  kubectl run myweb  --image=httpd
+   22  kubectl get pods
+   23  kubectl create -f first_code.yml 
+   24  vim first_code.yml 
+   25  rm first_code.yml 
+   26  vim first_code.yml
+   27  kubectl create -f first_code.yml 
+   28  vim resourcedefination.yml
+   29  kubectl apply -f resourcedefination.yml 
+   30  clear
+   31  kubectl create -f first_code.yml 
+   32  vim first_code.yml 
+   33  kubectl create -f first_code.yml 
+   34  kubectl get pods
+   35  kubectl describe pods
+   36  clear
+   37  kubectl get pods
+   38  kubectl delete myweb
+   39  kubectl delete pod  myweb
+   40  kubectl get pods
+   41  kubectl describe pods
+   42  clear
+   43  kubectl delete pods -all
+   44  kubectl delete pods --all
+   45  clear
+   46  vim labels.yml
+   47  clear
+   48  kubectl create -f labels.yml 
+   49  kubectl get pods
+   50  kubectl get pods --show=label
+   51  kubectl get pods --show=labels
+   52  kubectl get pods --show-label
+   53  kubectl get pods --help
+   54  kubectl get pods --show-label=all
+   55  kubectl get pods --show-labels=all
+   56  kubectl get pods --all-labels
+   57  clear
+   58  kubectl get pods --show-labels
+   59  kubectl describe pods
+   60  clear
+   61  history
