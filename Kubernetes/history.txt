@@ -94,3 +94,24 @@ kubectl get pods
    45  kubectl get pod --l "team notin (team1)" --show-labels
    46  kubectl get pod -l "team notin (team1)" --show-labels
    47  kubectl get pod -l "team in (team1)" --show-labels
+   //replication controller
+   29  kubectl get pds
+   30  kubectl get pods
+   31  kubectl delete pod --all
+   32  clear
+   33  vim rc.yml
+   34  kubectl create -f rc.yml 
+   35  kubectl get pods
+   36  kubectl get pods --show-label
+   37  kubectl get pods --show-labels
+   38  kubectl get rc
+   39  kubectl get rc --show-label
+   40  s
+   41  kubectl get rc --show-labels
+   42  kubectl describe rc
+   43  clear
+   44  kubectl delete pods --all
+   45  kubectl get pods
+   46  kubectl describe pods
+   47  kubectl describe rc
+   48  vim rc.yml
