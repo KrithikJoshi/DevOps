@@ -115,3 +115,37 @@ kubectl get pods
    46  kubectl describe pods
    47  kubectl describe rc
    48  vim rc.yml
+   //architecture of kubernetes commands
+   4  kubectl get node
+    5  kubectl get nodes
+    6  clear
+    7  kubectl get pods -n kube-system
+    8  cat /etc/kubernetes/manifests/kube-apiserver.yaml 
+    9  ps -aux | grep kube-apiserver
+   10  apt install kube-controller-manager
+   11  snap install kube-controller-manager
+   12  kube-controller-manager 
+   13  kubectl get pods -n kube-system
+   14  cat /etc/kubernetes/manifests/kube-controller-manager.yaml 
+   15  cat /etc/systemd/kube-controller-manager.servie
+   16  cat /etc/systemd/kube-controller-manager.service
+   17  cd /etc/systemd/
+   18  ls
+   19  cat /etc/systemd/system/kube-controller-manager.service
+   20  pwd
+   21  cd system/
+   22  ls
+   23  grep kube
+   24  ls
+   25  ls -la
+   26  ps -aux | grep kube-controller-manager
+   27  ps -aux | grep kube-schedulara
+   28  ps -aux | grep kube-schedular
+   29  ps -aux | grep kube-scheduler
+   30  ps -aux | kubelet
+   31  wget https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubelet
+   32  kubelet.service
+   33  kubelet
+   34  ps -aux | grep kubelet
+   35  kubectl get pods -n kube-system
+   36  kubectl get daemonset -n kube-system
