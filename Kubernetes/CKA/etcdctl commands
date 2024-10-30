@@ -1,0 +1,12 @@
+3  etcdctl version
+4  etcdctl endpoint health
+5  etcdctl endpoint
+6  etcdctl get
+7  etcdctl get help
+8  etcdctl get 5
+9  clear
+10  export ETCDCTL_API=2
+11  etcdctl --version
+12  etcdctl backup
+13  etcdctl cluster-health
+14  kubectl exec etcd-controlplane -n kube-system -- sh -c "ETCDCTL_API=3 etcdctl get / --prefix --keys-only --limit=10 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key"
