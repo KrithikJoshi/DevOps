@@ -1,0 +1,24 @@
+1  k get po
+    2  k describe po ubuntu-sleeper 
+        k exec ubuntu-sleeper -- whoami
+    3  k describe po ubuntu-sleeper -o yaml
+    4  k get po ubuntu-sleeper -o yaml
+    5  k edit po ubuntu-sleeper 
+    6  cat /tmp/kubectl-edit-570010457.yaml
+    7  k apply --force -f /tmp/kubectl-edit-570010457.yaml
+    8  k get po
+    9  ls
+   10  cat multi-pod.yaml 
+   11  k get po
+   12  k edit po ubuntu-sleeper 
+   13  cat /tmp/kubectl-edit-2160188030.yaml
+   14  k apply --force -f /tmp/kubectl-edit-2160188030.yaml
+   15  k get po
+   16  k edit po ubuntu-sleeper 
+   17  cat  /tmp/kubectl-edit-861900094.yaml
+   18  k apply --force -f /tmp/kubectl-edit-861900094.yaml
+   19  k get po
+   20  cat /tmp/kubectl-edit-861900094.yaml
+   21  k get po ubuntu-sleeper -o yaml
+   22  clear
+   23  history
