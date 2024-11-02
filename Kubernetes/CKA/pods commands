@@ -1,0 +1,12 @@
+kubectl run nginx --image=nginx
+kubectl create -f redis.yml
+kubectl describe pods
+kubectl get pods
+kubectl delete pod "pod name"
+kubectl describe pod "pod name"
+kubectl get pods -o wide //some detailed version
+kubectl run redis --image=redis --dry-run=client -o yaml // this command creates a yml file similar 
+                                                         // to the yml file redis.yml 
+kubectl run redis --image=redis --dry-run=client -o yml > redis.yml // the data of the yml file will be 
+                                                                      redis.yml
+                                                       
