@@ -1,0 +1,25 @@
+1  whoami
+    2  k get pod
+    3  k describe pod | grep imagw
+    4  k describe pod | grep image
+    5  k get deployments.apps 
+    6  k edit deployments.apps 
+    7  k describe deployments.apps 
+    8  k describe pods
+    9  k edit deployments.apps 
+   10  k replace --force -f /tmp/kubectl-edit-2740749425.yaml
+   11  vim /tmp/kubectl-edit-2740749425.yaml
+   12  k replace --force -f /tmp/kubectl-edit-2740749425.yaml
+   13  k get pods
+   14  k edit deployments.apps 
+   15  k get pods
+   16  kubectl create secret docker-registry private-reg-cred --docker-username=dock_user --docker-password=dock_password --docker-server=myprivateregistry.com:5000 --docker-email=dock_user@myprivateregistry.com
+   17  k create secret docker --help
+   18  k create secret --help
+   19  k get pods
+   20  k get deploy
+   21  k edit deployments.apps web 
+   22  k get secrets
+   23  k edit deployments.apps web 
+   24  k get pods
+   25  history
