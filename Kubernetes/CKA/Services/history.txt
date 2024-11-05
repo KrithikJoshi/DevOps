@@ -1,0 +1,10 @@
+kubectl get services
+kubectl describe service
+kubectl get deployments
+kubectl create service nodeport webapp-service --node-port=30080 --tcp=8080 --dry-run=client -o yaml > webapp-service.yaml
+vim webapp-service.yaml 
+kubectl create -f webapp-service.yaml 
+kubectl delete service webapp-service 
+vim webapp-service.yaml 
+kubectl create -f webapp-service.yaml 
+history
