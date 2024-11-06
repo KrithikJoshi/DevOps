@@ -1,0 +1,27 @@
+kubectl get pods
+kubectl get rs
+kubectl get deployements
+kubectl get deployement
+kubectl get deployments
+kubectl get deployments
+kubectl get rs
+kubectl get pods
+kubectl describe pods
+kubectl describe deployments
+kubectl create -f deployment-definition-1.yaml 
+vim deployment-definition-1.yaml 
+kubectl create -f deployment-definition-1.yaml 
+vim deployment-definition-1.yaml 
+vim deployment-definition-1.yaml 
+kubectl create -f deployment-definition-1.yaml 
+vim deployment-definition-1.yaml 
+kubectl create -f deployment-definition-1.yaml 
+vim deployment-definition-1.yaml 
+kubectl create -f deployment-definition-1.yaml 
+kubectl create deployment -h
+kubectl create deployment httpd-frontend --replicas=3 --image=httpd:2.4-alpine --dry-run=client -o yaml > httpd-deployement.yaml
+vim httpd-deployement.yaml 
+kubectl get deployments
+kubectl create -f httpd-deployement.yaml 
+kubectl get deployments
+history
