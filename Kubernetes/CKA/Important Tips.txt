@@ -1,0 +1,12 @@
+As we know that creating a new yml file again and again in linux and typing yml file is time consuming.
+So Kubernetes provides templates of the yml file through specific commands
+Commands are:-
+    kubectl run nginx --image=nginx //Creates an NGINX POD
+    kubectl run nginx --image=nginx --dry-run=client -o yaml //Generate POD Manifest YAML file (-o yaml).
+    kubectl create deployment --image=nginx nginx // Create a deployement
+    kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+    kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml 
+                                                                    // saves it into the file
+    kubectl create -f nginx-deployment.yaml //Creates the necessary changes done to the yml file
+    OR
+    kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml
