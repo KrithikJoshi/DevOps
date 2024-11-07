@@ -1,0 +1,25 @@
+ 1  kubectl get all --help 
+    2  kubectl describe nodes node01 
+    3  kubectl edit nodes node01
+    4  kubectl describe nodes node01 
+    5  kubectl create deployment --help
+    6  kubectl create deploy blue --image=nginx --replicas=3
+    7  kubectl get deploy
+    8  kubectl get nodes -o wide
+    9  kubectl describe nodes controlplane 
+   10  kubectl describe pod blue-6dc9b889f5-
+   11  kubectl describe nodes node01 
+   12  kubectl delete deployment blue 
+   13  kubectl create deploy blue --image=nginx --replicas=3  --dry-run=client -o yaml>blue.yaml
+   14  vim blue.yaml 
+   31  kubectl create -f blue.yaml 
+   32  kubectl get pods -o wide
+   33  ls
+   34  kubectl create deploy red --image=nginx --replicas=2 --dry-run=client -o yaml>red.yaml
+   35  vim red.yaml 
+   38  kubectl create -f red.yaml 
+   39  kubectl get pods -o wide
+   40  ls
+   41  cat blue.yaml 
+   42  cat red.yaml 
+   43  history
