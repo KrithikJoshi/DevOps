@@ -1,0 +1,26 @@
+Creation of a pod using imperative format this can save time in the exam
+-- kubectl run nginx --image=nginx
+Generation of a POD manifest file in yaml format
+-- kubectl run nginx --image=nginx --dry-run=client -o yaml 
+Creation of a deployement using imperative approach
+-- kubectl create deployment --image=nginx nginx
+Generation of a Deployment manifest YAML file 
+--kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+Generation of a Deployment with 4 replicas
+-- kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml
+Scaling of deployment
+--kubectl scale deployment nginx--replicas=5
+Saving the yaml code into the file
+--kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > deployment-definition-1.yaml
+Creation of a service name redis-service of type ClusterIP to expose redis port 6379
+--kubectl create svc clusterip redis-service --tcp=6379:6379 --dry-run=client -o yaml
+OR
+--kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
+both commands have there own challenges but recommendation of the command usage is 
+ "--kubeclt expose"
+ Another example of both command
+--kubectl create svc nodeport nginx --tcp=80:80 --dry-run=client -o yaml
+OR
+--kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml
+
+These are all the certification tips which must be done or used in the final exam.

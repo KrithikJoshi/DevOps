@@ -1,0 +1,35 @@
+kubectl run nginx-pod --image=nginx:alpine
+kubectl get pods
+kubectl run redis --image=redis:alpine --selector "tier=db"
+kubectl run redis --image=redis:alpine --labe; "tier=db"
+kubectl run redis --image=redis:alpine --label "tier=db"
+kubectl run redis --image=redis:alpine --labels "tier=db"
+kubectl describe pod redis 
+kubectl expose pod redis --type=ClusterIP --name=redis-service --port=6379
+kubectl get svc
+   kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3
+   kubectl get deployment
+   kubectl run pod custom-nginx --image=nginx --tcp=8080:8080
+   kubectl run pod custom-nginx --image=nginx --port=8080
+   kubectl get pods
+   kubectl delete pod
+   kubectl delete pod pod
+   kubectl run custom-nginx --image=nginx --port=8080
+   kubectl get pods
+   kubectl create ns dev-ns
+   kubectl get ns
+   kubectl create deployment redis-deploy --namespace=dev-ns --image=redis --replicas=2
+   kubectl get deploy
+   kubectl get deploy -n=dev-ns 
+   kubectl run httpd --image=httpd:alpine 
+   kubectl create svc clusterip httpd --tcp=80:80
+   kubectl delete svc httpd 
+   kubectl expose svc httpd --name=httpd --port=80
+   kubectl create svc clusterip httpd --tcp=80:80
+   kubectl expose svc httpd --name=httpd --port=80
+   kubectl expose svc httpd --port=80
+   kubectl delete svc httpd 
+   kubectl expose svc httpd --name=httpd --port=80
+   kubectl expose pod httpd --name=httpd --port=80 OR kubectl run httpd --image=httpd:alpine --port=80 --expose=true
+   clear
+history
