@@ -1,0 +1,20 @@
+1  kubectl get pods
+    2  kubectl describe pod rabbit 
+    3  kubectl describe pod rabbit | grep cpu
+    4  kubectl delete pod rabbit 
+    5  kubectl get pods
+    6  kubectl describe pod elephant 
+    7  kubectl edit pod elephant 
+    8  vim /tmp/kubectl-edit-282147084.yaml 
+    9  kubectl delete pod elephant 
+   10  kubectl create -f /tmp/kubectl-edit-282147084.yaml 
+   OR
+   kubectl replace --force -f /tmp/kubectl-edit-282147084.yaml
+   11  kubectl get pods
+   12  vim /tmp/kubectl-edit-282147084.yaml 
+   13  kubectl edit pod elephant | grep image
+   14  kubectl delete pod
+   15  kubectl delete pod elephant 
+   16  vim /tmp/kubectl-edit-282147084.yaml 
+   17  cat /tmp/kubectl-edit-282147084.yaml 
+   18  history

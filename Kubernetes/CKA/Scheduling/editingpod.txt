@@ -1,0 +1,8 @@
+1) -- kubectl edit pod // this edit does'nt allow to edit some of the components in the pod
+                        So copy the file in another new yaml file and edit the same file and use create command to create the pod
+2) -- kubectl get pod webapp -o yaml >&nbsp;my-new-pod.yaml //this command will copy the pod original yaml file into 
+                                                            my-new-pod.yaml file
+3) -- kubectl delete pod webapp //we can delete the pod which was initially created 
+4) -- kubectl create -f my-new-pod.yaml //recreate the same pod using yaml file where the pod details is saved 
+5) -- kubectl edit deployment my-deployment // similar for deployments
+6) -- kubectl get deployment my-deployement -o yaml >&nbsp;my-deployment.yaml
