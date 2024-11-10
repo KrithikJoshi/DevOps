@@ -1,0 +1,12 @@
+1  kubectl get nodes
+    2  kubectl create -f nginx.yaml 
+    3  kubectl get pods -n kube-system
+    5  vim nginx.yaml 
+    6  kubectl delete pod nginx 
+    7  kubectl create -f nginx.yaml 
+       kubectl get pods --watch // for continues watching 
+    8  kubectl get nodes
+    9  vim nginx.yaml 
+   10  kubectl delete pod nginx 
+   11  kubectl create -f nginx.yaml 
+   12  history
