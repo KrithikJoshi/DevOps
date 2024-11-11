@@ -1,0 +1,22 @@
+1  kubectl get nodes
+    2  kubectl describe nodes node01 
+    3  kubectl taint nodes node01 spray=mortein:NoSchedule
+    4  kubectl run mosquito --image=nginx
+    5  kubectl get pods mosquito 
+    6  kubectl describe pods mosquito 
+    7  kubectl run bee --image=nginx
+    8  kubectl taint --help 
+    9  kubectl delete pods bee
+   10  kubectl run bee --image=nginx 
+   11  kubectl delete pods bee
+   12  kubectl run bee --image=nginx --dry-run=client -o yaml > nginx.yaml
+   13  vim nginx.yaml 
+   14  kubectl get pods
+   15  kubectl create -f nginx.yaml 
+   16  kubectl get pods
+   17  vim nginx.yaml 
+   18  kubectl describe nodes controlplane 
+   19  kubectl edit nodes controlplane 
+   20  kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
+   21  kubectl get pods
+   22  history
