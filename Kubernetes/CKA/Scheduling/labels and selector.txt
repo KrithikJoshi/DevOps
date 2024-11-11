@@ -1,0 +1,25 @@
+1  kubectl get pods --selector=dev
+    2  kubectl get pods --selector=env
+    3  kubectl get pods --help
+    4  kubectl get pods -l env=dev
+    5  kubectl get pods -l env=dev | wc -l
+    6  kubectl get pods -l bu=finance
+    7  kubectl get pods -l bu=finance | wc -l
+    8  kubectl get pods -l prof
+    9  kubectl get pods -l prof
+   10  kubectl get pods -l prod
+   11  kubectl get all --selector=prod
+   12  kubectl get all -l env=prod | wc -l
+   13  kubectl get all -l env=prod
+   14  kubectl get all -l env=prod | wc 
+   15  wc --help
+   16  kubectl get all -l env=prod | wc -c
+   17  kubectl get all -l env=prod | wc -w
+   18  kubectl get all -l env=prod | wc -m
+   19  kubectl get all -l env=prod | wc -L
+   20  kubectl get all -l env=prod | wc -l
+   21  kubectl get pods -l env=prod, bu=finance, tier=frontend
+   22  kubectl get pods -l env=prod,bu=finance,tier=frontend
+   23  vim replicaset-definition-1.yaml 
+   24  kubectl create -f replicaset-definition-1.yaml 
+   25  history
