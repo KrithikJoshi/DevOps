@@ -1,0 +1,34 @@
+kubectl get daemonsets
+    2  kubectl get all daemonsets 
+    3  kubectl all daemonsets 
+    4  kubectl get daemonsets -all
+    5  kubectl get ns
+    6  kubectl get daemonsets --all
+    7  kubectl get daemonsets --help
+    8  kubectl get daemonsets --all-namespaces
+    9  kubectl describe daemonsets 
+   10  kubectl describe daemonsets --all-namespaces 
+   11  kubectl describe daemonsets --all-namespaces | grep image
+   12  kubectl get pods
+   13  kubectl get pods --all-namespaces 
+   14  kubectl describe pod --help
+   15  kubectl describe pod --all-namespaces=kube-funnel
+   16  kubectl describe pod
+   17  kubectl describe pod --namespace=kube-flannel 
+   18  kubectl describe pod --namespace=kube-flannel | grep image
+   19  kubectl create deployment elasticsearch --namespace=kube-system --image=registry.k8s.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml > FluentD.yaml
+   20  vim FluentD.yaml 
+   21  kubectl create -f FluentD.yaml 
+   22  vim FluentD.yaml 
+   23  kubectl apply -f FluentD.yaml 
+   24  vim fluentd.yaml
+   25  kubectl apply -f fluentd.yaml 
+   26  vim FluentD.yaml 
+   27  kubectl delete daemonsets --namespace=kube-system elasticsearch 
+   28  kubectl apply -f FluentD.yaml 
+   29  vim FluentD.yaml 
+   30  kubectl apply -f FluentD.yaml 
+   31  vim FluentD.yaml 
+   32  kubectl apply -f FluentD.yaml 
+   33  vim FluentD.yaml 
+   34  kubectl apply -f FluentD.yaml 
