@@ -1,0 +1,65 @@
+kubectl get pods -A
+    2  ls /etc/kubernetes/manifests/
+    3  kubectl get nodes
+    4  kubectl get pods -A -o wide
+    5  cat /etc/kubernetes/manifests/kube-apiserver.yaml 
+    6  cat /etc/kubernetes/manifests/kube-apiserver.yaml  | grep imahe
+    7  cat /etc/kubernetes/manifests/kube-apiserver.yaml  | grep image
+    8  ssh node01
+    9  kubectl run static-busybox --image=busybox --dry-run=client -o yaml>static-busybox.yaml
+   10  ls
+   11  cat et 
+   12  rm et
+   13  cat static-busybox.yaml 
+   14  mv static-busybox.yaml 
+   15  mv --help 
+   16  ls
+   17  pwd
+   18  mv static-busybox.yaml /etc/kubernetes/manifests/
+   19  vim /etc/kubernetes/manifests/
+   20  cd /etc/kubernetes/manifests/
+   21  rm static-busybox.yaml 
+   22  kubectl run --restart=Never static-busybox --image=busybox --command --sleep 1000 --dry-run=client -o yaml > static-box.yaml
+   23  kubectl run --restart=Never static-busybox --image=busybox --command -- sleep 1000 --dry-run=client -o yaml > static-box.yaml
+   24  ls
+   25  vim static-box.yaml 
+   26  vim kube-
+   27  vim kube-scheduler.yaml 
+   28  cd
+   29  ls
+   30  rm static-busybox.yaml 
+   31  cd /etc/kubernetes/manifests/
+   32  rm static-busybox.yaml 
+   33  ls
+   34  vim static-box.yaml 
+   35  rm static-box.yaml 
+   36  cd
+   37  history
+   38  kubectl run --restart=Never static-busybox --image=busybox --command -- sleep 1000 --dry-run=client -o yaml > /etc/kubernetes/manifests/static-busybox.yaml
+   39  kubectl get pods -a
+   40  kubectl get pods -A
+   41  kubectl delete pods static-busybox 
+   42  kubectl run --restart=Never static-busybox --image=busybox --command -- sleep 1000 --dry-run=client -o yaml > /etc/kubernetes/manifests/static-busybox.yaml
+   43  kubectl get pods -A
+   44  kubectl delete pods static-busybox 
+   45  kubectl run --restart=Never --image=busybox static-busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml
+   46  kubectl get pods -A
+   47  vim /etc/kubernetes/manifests/static-busybox.yaml 
+   48  kubectl get pods 
+   49  kubectl delete pods static-busybox-controlplane 
+   50  kubectl get pods 
+   51  kubectl get pods -A
+   52  ssh node01
+   53  kubectl get pods -A
+   54  kubectl delete pod static-greenbox-node01 
+   55  kubectl get pods -A
+   56  cd
+   57  cd /etc/kubernetes/manifests/
+   58  ls
+   59  ls -la
+   60  cd
+   61  ssh node01
+   62  kubectl get nodes -o wide
+   63  ssh node01@192.3.203.3
+   64  ssh node01
+   65  kubectl get pods -A

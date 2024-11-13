@@ -1,18 +1,12 @@
 kubectl get daemonsets
-    2  kubectl get all daemonsets 
-    3  kubectl all daemonsets 
-    4  kubectl get daemonsets -all
-    5  kubectl get ns
-    6  kubectl get daemonsets --all
-    7  kubectl get daemonsets --help
-    8  kubectl get daemonsets --all-namespaces
+    8  kubectl get daemonsets -A
     9  kubectl describe daemonsets 
    10  kubectl describe daemonsets --all-namespaces 
    11  kubectl describe daemonsets --all-namespaces | grep image
    12  kubectl get pods
    13  kubectl get pods --all-namespaces 
    14  kubectl describe pod --help
-   15  kubectl describe pod --all-namespaces=kube-funnel
+   15  kubectl describe daemonsets kube-proxy -n kube-system
    16  kubectl describe pod
    17  kubectl describe pod --namespace=kube-flannel 
    18  kubectl describe pod --namespace=kube-flannel | grep image
