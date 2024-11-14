@@ -1,0 +1,35 @@
+1  kubectl get pods
+    kubectl get pods -A
+    kubectl describe pod kube-scheduler-controlplane -n kube-system
+    2  kubectl get events
+    3  kubectl get serviceaccount -n kube-system 
+    4  kubectl get clusterrolebinding
+    5  ls
+    6  cat my-scheduler-configmap.yaml 
+    7  kubectl create configmap my-scheduler-config --from-file=/root/my-scheduler.yaml -n kube-system
+    8  kubectl get configmap my-scheduler-config -n kube-system 
+    9  kubectl create -f my-scheduler-configmap.yaml 
+   10  kubectl create -f my-scheduler-config.yaml 
+   11  clear
+   12  kubectl get events
+   13  kubectl get pods -n=kube-system 
+   14  vim my-scheduler.yaml 
+   15  kubectl create -f my-scheduler.yaml 
+   16  kubectl get pods -n=kube-system 
+   17  kubectl delete pods -n=kube-system my-scheduler 
+   18  cat my-scheduler-config.yaml 
+   19  cat my-scheduler-configmap.yaml 
+   20  kubectl edit pods -n=kube-system kube-scheduler-controlplane 
+   21  vim my-scheduler.yaml 
+   22  kubectl create -f my-scheduler.yaml 
+   23  kubectl get poss -n=kube-system 
+   24  kubectl get pods -n=kube-system 
+   25  ls
+   26  cat nginx-pod.yaml 
+   27  cat my-scheduler.yaml 
+   28  cat nginx-pod.yaml 
+   29  vim nginx-pod.yaml 
+   30  kubectl create -f nginx-pod.yaml 
+   31  kubectl get pods
+   32  kubectl get pods --watch
+   33  history
