@@ -1,0 +1,12 @@
+1  kubectl get pods
+    2  kubectl edit pod webapp-1 
+    4  kubectl get pods
+    6  kubectl describe pods
+   11  kubectl logs
+   12  kubectl logs --help
+   18  kubectl logs webapp-1 
+   19  kubectl get pods
+   20  kubectl logs webapp-2
+   21  kubectl logs webapp-2
+   22  kubectl logs webapp-2
+   23  history

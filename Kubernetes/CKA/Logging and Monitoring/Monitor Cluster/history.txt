@@ -1,0 +1,9 @@
+1  git clone https://github.com/kodekloudhub/kubernetes-metrics-server.git
+    2  ls
+    3  cd kq
+    4  cd kubernetes-metrics-server/
+    5  ls
+    6  kubectl create -f .
+    8  kubectl top node
+   16  kubectl top pod 
+   17  history
