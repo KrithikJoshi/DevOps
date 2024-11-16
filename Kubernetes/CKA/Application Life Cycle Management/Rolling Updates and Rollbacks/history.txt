@@ -1,0 +1,26 @@
+ 1  kubectl get deployments
+    2  kubectl get pods
+    3  kubectl get rs
+    4  kubectl describe deployments.apps frontend 
+    5  bash /root/curl-test.sh 
+    6  kubectl describe deployments.apps frontend 
+    7  kubectl get pods
+    8  kubectl edit deployments.apps frontend 
+    9  bash /root/curl-test.sh 
+   10  kubectl get ru
+   11  kubectl edit deployments.apps frontend 
+   12  kubectl delete deployments.apps frontend 
+   13  kubectl apply -f /tmp/kubectl-edit-4176038472.yaml
+   14  vim /tmp/kubectl-edit-4176038472.yaml
+   15  kubectl apply -f /tmp/kubectl-edit-4176038472.yaml
+   16  vim /tmp/kubectl-edit-4176038472.yaml
+   17  kubectl apply -f /tmp/kubectl-edit-4176038472.yaml
+   18  vim /tmp/kubectl-edit-4176038472.yaml
+   19  kubectl apply -f /tmp/kubectl-edit-4176038472.yaml
+   20  kubectl edit deployments.apps frontend 
+   21  bash /root/curl-test.sh 
+   22  kubectl get pods
+   23  kubectl get pods --watch
+   24  bash /root/curl-test.sh 
+   25  kubectl get pods --watch
+   26  history
