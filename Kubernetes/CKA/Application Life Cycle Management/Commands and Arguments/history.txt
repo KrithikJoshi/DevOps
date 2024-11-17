@@ -1,0 +1,49 @@
+1  kubectl get pods
+    2  kubectl describe pod ubuntu-sleeper 
+    3  ls
+    4  cat ubuntu-sleeper-
+    5  cat ubuntu-sleeper-2.yaml 
+    6  kubectl edit pod ubuntu-sleeper 
+    7  vim ubuntu-sleeper-2.yaml 
+    8  kubectl create -f ubuntu-sleeper-2.yaml 
+    9  kubectl create -f ubuntu-sleeper-3.yaml 
+   10  vim ubuntu-sleeper-3.yaml 
+   11  kubectl create -f ubuntu-sleeper-3.yaml 
+   12  vim ubuntu-sleeper-3.yaml 
+   13  kubectl apply -f ubuntu-sleeper-3.yaml 
+   14  kubectl get pods
+   15  kubectl delete pod ubuntu-sleeper-3 
+   16  kubectl create -f ubuntu-sleeper-3.yaml 
+   17  cd webapp-color
+   18  ls
+   19  cat Dockerfile
+   20  cat Dockerfile2
+   21  cd
+   22  ls
+   23  cd webapp-color-2
+   24  ls
+   25  cat Dockerfile 
+   26  cat webapp-color-pod.yaml 
+   27  cd
+   28  cd webapp-color-3
+   29  ALS
+   30  ls
+   31  cat webapp-color-pod-2.yaml 
+   32  cd
+   33  ls
+   34  cd webapp-color-3
+   35  cd
+   36  kubectl create -f webapp-color-3/webapp-color-pod-2.yaml 
+   37  kubectl delete pod webapp-green 
+   38  vim webapp-green
+   39  vim webapp-green 
+   40  vim webapp-green 
+   41  mv webapp-green webapp-green.yaml
+   42  vim webapp-green.yaml 
+   43  vim webapp-green.yaml 
+   44  kubectl create -f webapp-green.yaml 
+   45  vim webapp-green.yaml 
+   46  kubectl create -f webapp-green.yaml 
+   47  ls
+   48  kubectl get pods
+   49  history
