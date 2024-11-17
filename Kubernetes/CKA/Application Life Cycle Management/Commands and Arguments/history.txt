@@ -47,3 +47,6 @@
    47  ls
    48  kubectl get pods
    49  history
+   Instead of creating the whole yaml file it can be done through command 
+   kubectl run webapp-green --image=kodekloud/webapp-color -- --color green
+   
