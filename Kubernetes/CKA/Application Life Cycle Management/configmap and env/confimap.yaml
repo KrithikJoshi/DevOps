@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  APP_COLOR: darkblue
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-11-23T06:32:38Z"
+  name: webapp-config-map
+  namespace: default
+  resourceVersion: "1189"
+  uid: de1c5d64-5f8c-4991-8d66-4eff9d817cd1
