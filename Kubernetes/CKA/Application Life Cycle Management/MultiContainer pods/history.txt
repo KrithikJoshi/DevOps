@@ -1,0 +1,31 @@
+1  kubectl get pods
+    2  k describe pods blue 
+    3  vim yellow.yaml
+    4  kubectl create -f yellow.yaml 
+    5  k get pods
+    6  k get pods -n elastic-stack 
+    7  kubectl -n elastic-stack logs kibana 
+    8  kubectl -n elastic-stack logs kibana --watch
+    9  kubectl -n elastic-stack logs kibana --help
+   10  kubectl -n elastic-stack logs kibana 
+   11  k get pods -n elastic-stack 
+   12  kubectl -n elastic-stack logs app
+   13  kubectl edit pods -n elastic-stack app
+   14  kubectl replace --force -f /tmp/kubectl-edit-1738327158.yaml
+   15  ls
+   16  cat elastic-search/
+   17  cd elastic-search/
+   18  ;s
+   19  ls
+   20  cat kibana-pod.yaml 
+   21  cd fluent-example/
+   22  ls
+   23  cat td-agent-config.yaml 
+   24  cd
+   25  history
+   26  k get --help
+   27* 
+   28  k get --all-namespaces 
+   29  k get -n elastic-stack 
+   30  k get all -n elastic-stack 
+   31  history
