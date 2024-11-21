@@ -31,6 +31,8 @@
    31  k replace --force -f /tmp/kubectl-edit-7314995.yaml
    32  k get pods
    33  k edit pod orange \
+    to check the error in the container 
+    k logs orange(container name) -c init-myservice
    34  k edit pod orange 
    35  k replace --force -f /tmp/kubectl-edit-3335064807.yaml
    36  k get pods
