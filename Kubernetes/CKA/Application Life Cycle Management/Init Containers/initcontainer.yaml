@@ -1,0 +1,158 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-11-24T10:56:17Z"
+  name: orange
+  namespace: default
+  resourceVersion: "1425"
+  uid: 3acf4b2a-88b9-417f-8766-2f115e7e0e56
+spec:
+  containers:
+  - command:
+    - sh
+    - -c
+    - echo The app is running! && sleep 3600
+    image: busybox:1.28
+    imagePullPolicy: IfNotPresent
+    name: orange-container
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-jf9pt
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  initContainers:
+  - command:
+    - sh
+    - -c
+    - sleep 2;
+    image: busybox
+    imagePullPolicy: Always
+    name: init-myservice
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-jf9pt
+      readOnly: true
+  nodeName: controlplane
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-jf9pt
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-11-24T10:56:19Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-11-24T10:56:17Z"
+    message: 'containers with incomplete status: [init-myservice]'
+    reason: ContainersNotInitialized
+    status: "False"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-11-24T10:56:17Z"
+    message: 'containers with unready status: [orange-container]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-11-24T10:56:17Z"
+    message: 'containers with unready status: [orange-container]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-11-24T10:56:17Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - image: busybox:1.28
+    imageID: ""
+    lastState: {}
+    name: orange-container
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-jf9pt
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.251.207
+  hostIPs:
+  - ip: 192.168.251.207
+  initContainerStatuses:
+  - containerID: containerd://164e2b76342e0e22583ed4b0f9d2446595bf809f24954a62a31313f160c1158c
+    image: docker.io/library/busybox:latest
+    imageID: docker.io/library/busybox@sha256:db142d433cdde11f10ae479dbf92f3b13d693fd1c91053da9979728cceb1dc68
+    lastState:
+      terminated:
+        containerID: containerd://11dc737d3b625fac080021ce9ff51dafc60b945a1a7bd62417bde214039dad3c
+        exitCode: 2
+        finishedAt: "2024-11-24T10:56:18Z"
+        reason: Error
+        startedAt: "2024-11-24T10:56:18Z"
+    name: init-myservice
+    ready: false
+    restartCount: 1
+    started: false
+    state:
+      terminated:
+        containerID: containerd://164e2b76342e0e22583ed4b0f9d2446595bf809f24954a62a31313f160c1158c
+        exitCode: 2
+        finishedAt: "2024-11-24T10:56:19Z"
+        reason: Error
+        startedAt: "2024-11-24T10:56:19Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-jf9pt
+      readOnly: true
+      recursiveReadOnly: Disabled
+  phase: Pending
+  podIP: 10.42.0.19
+  podIPs:
+  - ip: 10.42.0.19
+  qosClass: BestEffort
+  startTime: "2024-11-24T10:56:17Z

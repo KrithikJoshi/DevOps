@@ -1,0 +1,40 @@
+1  k get ods
+    2  k get pods
+    3  k edit pods blue 
+    4  k edit pods blue 
+    5  k describe pod blue 
+    6  k describe pod purple 
+    7  k describe pod purple 
+    8  k edit pods blue 
+    9  k edit pods red 
+   10  k edit pods blue 
+   11  kubectl replace --force -f /tmp/kubectl-edit-1839697958.yaml
+   12  k edit pods blue 
+   13  vim /tmp/kubectl-edit-1839697958.yaml
+   14  kubectl replace --force -f /tmp/kubectl-edit-1839697958.yaml
+   15  vim /tmp/kubectl-edit-1839697958.yaml
+   16  kubectl replace --force -f /tmp/kubectl-edit-1839697958.yaml
+   17  k get pods
+   18  k edit pod orange 
+   19  k replace --force -f /tmp/kubectl-edit-3942381405.yaml
+   20  k get pods
+   21  k edit pod orange 
+   22  k replace --force -f /tmp/kubectl-edit-3942381405.yaml
+   23  k get pods
+   24  k describe pod orange 
+   25  k edit pod orange 
+   26  k edit pod orange 
+   27  k replace --force -f /tmp/kubectl-edit-3942381405.yaml
+   28  k replace --force -f /tmp/kubectl-edit-395888595.yaml
+   29  k get pods
+   30  k edit pod orange 
+   31  k replace --force -f /tmp/kubectl-edit-7314995.yaml
+   32  k get pods
+   33  k edit pod orange \
+   34  k edit pod orange 
+   35  k replace --force -f /tmp/kubectl-edit-3335064807.yaml
+   36  k get pods
+   37  history
+   38  k edit pods blue 
+   39  cat /tmp/kubectl-edit-3335064807.yaml
+   40  history
