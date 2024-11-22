@@ -1,0 +1,45 @@
+1  k get clusters
+    2  k config --help
+    3  k config get-cluster
+    4  k config get-clusters
+    5  k get clusterroles
+    6  k get clusterroles | wc -l
+    7  k get clusterrolebindings.rbac.authorization.k8s.io 
+    8  k get clusterrolebindings.rbac.authorization.k8s.io | wc -l
+    9  k get clusterroles -o wide
+   10  k describe clusterrole cluster-admin 
+   11  k get clusterrolebindings.rbac.authorization.k8s.io 
+   12  k describe clusterrolebindings.rbac.authorization.k8s.io cluster-admin 
+   13  k create clusterrole --help
+   14  k create clusterrole michelle-role --verb=get,list,watch --resource=nodes --dry-run=client -o yaml > michelle-role.yaml
+   15  cat michelle-role.yaml 
+   16  k apply -f michelle-role.yaml 
+   17  k create clusterrolebinding --help
+   18  k get clusterrole michelle-role 
+   19  k create clusterrolebinding michelle-rolebinding --clusterrole=michelle-role --user=michelle --dry-run=client -o yaml> michelle-rolebinding.yaml
+   20  cat michelle-rolebinding.yaml 
+   21  k apply -f michelle-rolebinding.yaml 
+   22  k api-resources persistentvolumes
+   23  k api-resources --help
+   24  k api-resources 
+   25  kubectl api-resources --sort-by=persistentvolumes
+   26  kubectl api-resources --sort-by= storageclasses
+   27  kubectl api-resources --sort-by=storageclasses
+   28  kubectl api-resources --sort-by=pv
+   29  kubectl api-resources --sort-by=PersisentVolume
+   30  k create clusterrole storage-admin --resource=storage.k8s.io/v1,PersistentVolume --verb=get,list,watch --dry-run=client -o yaml > storage-admin.yaml
+   31  k create clusterrole storage-admin --resource=storage.k8s.io/v1 --resource=PersisentVolume --verb=get,list,watch --dry-run=client -o yaml > storage-admin.yaml
+   32  k create clusterrole storage-admin --resource=StorageClass --resource=PersisentVolume --verb=get,list,watch --dry-run=client -o yaml > storage-admin.yaml
+   33  k create clusterrole storage-admin --resource=StorageClass --resource=persistentvolumes  --verb=get,list,watch --dry-run=client -o yaml > storage-admin.yaml
+   34  cat storage-admin.yaml 
+   35  k apply -f storage-admin.yaml 
+   36  k create clusterrolebinding --help
+   37  k create clusterrolebinding michelle-storage-admin --clusterrole=storage-admin --user=michelle --dry-run=client -o yaml > michelle-storage-admin.yaml
+   38  cat michelle-storage-admin.yaml 
+   39  k apply -f michelle-storage-admin.yaml 
+   40  kubectl auth can-i list storageclasses --as michelle
+   41  ls
+   42  cat michelle-role.yaml 
+   43  cat storage-admin.yaml 
+   44  cat michelle-storage-admin.yaml 
+   45  history
