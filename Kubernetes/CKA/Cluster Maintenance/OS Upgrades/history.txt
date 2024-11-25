@@ -1,0 +1,18 @@
+1  k get nodes
+    2  k get deployments.apps 
+    3  k get pods -o wide
+    4  k cordon node01 
+    5  k drain node01 --ignore-daemonsets
+    6  k get pods -o wide
+    7  k uncordon node01 
+    8  k get nodes -o wide
+    9  k get pods -o wide
+   10  k drain node01 --ignore-daemonsets 
+   11  k get rs
+   12  k get pods 
+   13  k drain node01 --ignore-daemonsets --force 
+   14  k get  pods
+   15  k get pods -o wide
+   16  k cordon node01 
+   17  k get pods
+   18  history
