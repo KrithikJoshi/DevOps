@@ -1,0 +1,18 @@
+Step1 -
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+//copy these 2 command in worker node and controlplane node
+
+Step2- Determine which version to upgarde to 
+
+sudo apt update
+sudo apt-cache madison kubeadm
+
+Step 3- Upgrading the control plane node
+
+sudo apt-mark unhold kubeadm && \
+sudo apt-get update && sudo apt-get install -y kubeadm='1.31.3-1.1' && \
+sudo apt-mark hold kubeadm
+
