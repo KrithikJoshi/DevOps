@@ -1,0 +1,40 @@
+ 1  k version
+    2  k get nodes
+    3  k describe nodes 
+    4  k get deployments.apps 
+    5  k get nodes -o wide
+    6  kubeadm vers
+    7  kubeadm version
+    8  k cordon controlplane 
+    9  echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   10  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   11  sudo apt update
+   12  sudo apt-cache madison kubeadm
+   13  sudo apt-mark unhold kubeadm && sudo apt-get update && sudo apt-get install -y kubeadm='1.31.0-1.1' && sudo apt-mark hold kubeadm
+   14  kubeadm version
+   15  sudo kubeadm upgrade plan
+   16  sudo kubeadm upgrade apply v1.31.0
+   17  kubectl drain controlplane --ignore-daemonsets
+   18  sudo apt-mark unhold kubelet kubectl && sudo apt-get update && sudo apt-get install -y kubelet='1.31.0-1.1' kubectl='1.31.0-1.1 ' && sudo apt-mark hold kubelet kubectl
+   19  apt-get install kubelet=1.31.0-1.1
+   20  systemctl daemon-reload
+   21  systemctl restart kubelet
+   22  k get nodes
+   23  k uncordon controlplane 
+   24  k drain node01 
+   25  k drain node01 --ignore-daemonsets 
+   26  k get nodes
+   27  k uncordon node01 
+   28  history
+
+   ssh node01 - history
+   1  echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    2  curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    3  sudo apt-mark unhold kubeadm && sudo apt-get update && sudo apt-get install -y kubeadm='1.31.0-1.1' && sudo apt-mark hold kubeadm
+    4  sudo kubeadm upgrade node
+    5  kubectl drain node01 --ignore-daemonsets
+    6  sudo apt-mark unhold kubelet kubectl && sudo apt-get update && sudo apt-get install -y kubelet='1.31.0-1.1' kubectl='1.31.0-1.1 ' && sudo apt-mark hold kubelet kubectl
+    7  apt-get install kubelet=1.31.0-1.1
+    8  sudo systemctl daemon-reload
+    9  sudo systemctl restart kubelet
+   10  history
