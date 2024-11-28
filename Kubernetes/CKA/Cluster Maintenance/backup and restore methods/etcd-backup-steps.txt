@@ -1,0 +1,23 @@
+Step 1 - Backup
+ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key \
+  snapshot save /opt/snapshot-pre-boot.db 
+
+Step 2 - Restore
+
+1) ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379   --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key   snapshot save /opt/snapshot-pre-boot.db
+2)  vim /etc/kubernetes/manifests/etcd.yaml 
+3) Here we need to some necessary changes
+command 
+    --data-dir = /var/lib/etcd-from-backup
+Volumes:
+- hostPath:
+    path: /var/lib/etcd-from-backup
+volumeMounts:
+- mountPath: /var/lib/etcd-from-backup
+
+This will restart the etcd server and after 1-2 min we can view the changes
+command to watch the changes when the kubernetes cluster is down
+- watch crictl ps | grep etcdctl
+
+after restarting we can run the command and view the pods, deployements and services

@@ -1,0 +1,22 @@
+    1  k get deployments.apps 
+    2  k get pods --all-namespaces 
+    3  k describe pods etcd-controlplane -n kube-s
+    4  k describe pods etcd-controlplane -n kube-system 
+    5  cd /etc/kubernetes/pki/
+    6  cd etcd/
+    7  ls
+    8  pwd
+    9  ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379   --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key   snapshot save opt/snapshot-pre-boot.db
+   10  cd
+   11  ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379   --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key   snapshot save opt/snapshot-pre-boot.db
+   12  ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379   --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key   snapshot save /opt/snapshot-pre-boot.db
+   13  $ etcdutl snapshot restore snapshot.db --data-dir output-dir
+   14  etcdutl snapshot restore snapshot.db --data-dir output-dir
+   15  vim /etc/kubernetes/manifests/etcd.yaml 
+   16  k get pods
+   17  k get deployments.apps 
+   18  watch crictl ps | grep etch
+   19  watch crictl ps | grep etcd
+   20  k get pods
+   21  k get deployments.apps 
+   22  history
