@@ -1,0 +1,57 @@
+1  k help
+    2  k get --help
+    3  k get clusterrole
+    4  k get pods
+    5  k get pods --all-namespaces 
+    6  k config 
+    7  k config get-clusters 
+    8  k config use-context cluster1
+    9  k get nodes
+   10  k config use-context cluster2
+   11  k get nodes
+   12  k config use-context cluster1
+   13  ssh cluster1-controlplane
+   14  k get pods
+   15  k get pods -n kube-system 
+   16  k config use-context cluster
+   17  k config use-context cluster2
+   18  ssh cluster2-controlplane
+   19  k config use-context cluster2
+   20  k config use-context cluster1
+   21  cd /var/lib
+   22  ls
+   23  cd
+   24  cd /etc/
+   25  cd
+   26  ssh cluster1-controlplane
+   27  etcdctl snapshot save --endpoints=https://127.0.0.1:2379 >  --cacert=/etc/kubernetes/pki/etcd/ca.crt > --cert=/etc/kubernetes/pki/etcd/server.crt > --key=/etc/kubernetes/pki/etcd/server.key > /opt/cluster1.db
+   28  Snapshot saved at /opt/cluster1.dbcd
+   29  k config use-context cluster1
+   30  export ETCDCTL_API=3
+   31  etcdctl 
+   32  etcdctl snapshot save --endpoints=https://127.0.0.1:2379 \
+   33  cd /etc
+   34  ls
+   35  cd
+   36  ssh cluster1-controlplane
+   37  scp cluster1-controlplane:/opt/cluster1.db /opt/cluster1.db
+   38  k config use-context cluster2
+   39  k get pods -n kube-system 
+   40  k get nodes
+   41  export ETCDCTL_API=3
+   42  etcdctl
+   43  etcdctl snaphot restore --help
+   44  etcdctl snapshot restore --help
+   45  etcdctl snapshot restore /opt/cluster2.db /var/lib/etcd-data-new
+   46  etcdctl snapshot restore /opt/cluster2.db 
+   47  cd /var/lib
+   48  ls
+   49  cd /opt/
+   50  ls
+   51  cd
+   52  scp /opt/cluster2.db 
+   53  scp /opt/cluster2.db  etcd-sever:/root/cluster2.db
+   54  ssh etcd-server
+   55  scp /opt/cluster2.db  etcd-server:/root/cluster2.db
+   56  ssh etcd-server
+   57  history

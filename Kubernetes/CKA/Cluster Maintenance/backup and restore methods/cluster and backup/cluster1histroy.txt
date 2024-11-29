@@ -1,0 +1,22 @@
+ 1  cd /var/lib/etcd/
+    2  ls
+    3  cd
+    4  cd /etc/etcd
+    5  cd
+    6  kubectl
+    7  export ETCDCTL_API=3
+    8  etcdctl --help
+    9  etcdctl snapshot save --endpoints=https://127.0.0.1:2379  --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key /opt/cluster1.db
+   10  etcdctl snapshot save --endpoints=https://127.0.0.1:2379  --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key /opt/cluster1.db
+   11  export ETCDCTL_EXPORT=3
+   12  etcdctl snapshot save --endpoints=https://127.0.0.1:2379  --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key /opt/cluster1.db
+   13  etcdctl 
+   14  ETCDCTL_API=3 etcdctl snapshot save --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcdctl/ca.crt --cert=/etc/kubernetes/pki/etcdctl/server.crt --key=/etc/kubernetes/pki/etcdctl/server.key /opt/cluster1.db
+   15  cd /etc/
+   16  cd kubernetes/
+   17  ls
+   18  cd pki/
+   19  cd etcd/
+   20  ETCDCTL_API=3 etcdctl snapshot save --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key /opt/cluster1.db
+   21  cd
+   22  history

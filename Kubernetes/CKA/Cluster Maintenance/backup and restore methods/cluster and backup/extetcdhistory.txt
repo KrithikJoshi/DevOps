@@ -1,0 +1,20 @@
+1  export ETCDCTL_API=3
+    2  etcdctl
+    3  etcdctletcdctl snapshot restore --endpoints=https://127.0.0.1:2379 \
+    4  etcdctletcdctl snapshot restore --endpoints=https://127.0.0.1:2379 \
+    5  cd /etc
+    6  ls
+    7  cd etcd/
+    8  ls
+    9  cd pki/
+   10  ls
+   11  cd
+   12  ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/etc/etcd/pki/ca.pem --cert=/etc/etcd/pki/etcd.pem --key=/etc/etcd/pki/etcd-key.pem snapshot restore /root/cluster2.db --data-dir /var/lib/etcd-data-new
+   13  vi /etc/systemd/system/etcd.service 
+   14  cd /var/lib/
+   15  chown -R etcd:etcd /var/lib/etcd-data-new
+   16  ls -ld etcd-data-new/
+   17  systemctl daemon-reload
+   18  systemctl restart etcd
+   19  cd
+   20  history
