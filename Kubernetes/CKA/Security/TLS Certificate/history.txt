@@ -1,0 +1,34 @@
+1  k get pods -n kube-system 
+    2  k describe pod kube-apiserver-controlplane -n kube-system 
+    3  k describe pod etcd-controlplane -n kube-system
+    4  openssl x509 -in /etc/kubernetes/pki/apiserver.crt 
+    5  openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout
+    6  openssl x509 -in /etc/kubernetes/pki/etcd/ca.crt -text -noout
+    7  openssl x509 -in /etc/kubernetes/pki/etcd/server.crt -text -noout
+    8  openssl x509 -in /etc/kubernetes/pki/ca.crt -text -noout
+    9  vim /etc/kubernetes/manifests/etcd.yaml 
+   10  crictl ps -a
+   11  k get pods
+   12  crictl ps -a
+   13  k get pods
+   14  crictl ps -a
+   15  k get pods
+   16  crictl ps -a
+   17  crictl logs 86b64033ede2f
+   18  crictl ps -a
+   19  crictl logs
+   20  crictl logs de4e38bcdaad3
+   21  crictl ps -a
+   22  crictl logs ad95a3fc1d83a
+   23  cd /etc/kubernetes/
+   24  ls
+   25  cd manifests/
+   26  ls
+   27  cat kube-apiserver.yaml 
+   28  vim kube-apiserver.yaml 
+   29  cd
+   30  crictl ps -a
+   31  crictl ps-a
+   32  crictl ps -a
+   33  k get pods
+   34  history
