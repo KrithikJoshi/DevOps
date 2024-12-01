@@ -1,0 +1,27 @@
+1  ls
+    2  cat akshay.
+    3  cat akshay.yaml 
+    4  k get csr
+    5  k certificate approve akshay
+    6  k apply -f akshay.yaml 
+    7  vim akshay.yaml 
+    8  k apply -f akshay.yaml 
+    9  cat akshay.csr | base64 -w 0
+   10  rm akshay.yaml 
+   11  vim akshay.yaml
+   12  k apply -f akshay.yaml 
+   13  k get csr
+   14  k approve --help
+   15  k certificate --help
+   16  k certificate approve akshay
+   17  k get csr
+   18  ls
+   19  cat 1
+   20  k edit csr agent-smith 
+   21  k certificate deny agent-smith
+   22  k delete csr agent-smith 
+   23  history
+   24  cat akshay.yaml 
+   25  cat akshay.key 
+   26  cat akshay.csr 
+   27  history
