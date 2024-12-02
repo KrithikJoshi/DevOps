@@ -1,0 +1,46 @@
+1  la
+    2  cd .kube/
+    3  ls
+    4  cat config 
+    5  cd
+    6  k config view 
+    7  ls
+    8  cd CKA/
+    9  ls
+   10  cd
+   11  k config view -help
+   12  k config view --help
+   13  k config --help
+   14  cd
+   15  ls
+   16  cat my-kube-config 
+   17  k config current-context --kubeconfig my-kube-config
+   18  k config use-context test-cluster-1
+   19  k config --kubeconfig=/root/my-kube-config use-context research
+   20  k config --kubeconfig=/root/my-kube-config current-context
+   21  mv my-kube-config .kube/
+   22  ls
+   23  cd .kube/
+   24  ls
+   25  cd
+   26  vi ~/.bashrc
+   27  mv .kube/my-kube-config /root/
+   28  ls
+   29  vi ~/.bashrc 
+   30  source ~/.bashrc
+   31  k config use-context
+   32  k get pods
+   33  k config current-context
+   34  cd /etc/kubernetes/pki/
+   35  ls
+   36  cd users/
+   37  ls
+   38  cd dev-user/
+   39  ls
+   40  cat cd
+   41  cd
+   42  cat my-kube-config 
+   43  vim my-kube-config 
+   44  k get pods
+   45  cat my-kube-config 
+   46  history
