@@ -1,0 +1,69 @@
+1  k get pods
+    2  k get pods -n kube-system
+    3  k describe kube-apiserver-controlplane -n kube-system
+    4  k describe pod kube-apiserver-controlplane -n kube-system
+    5  k get roles
+    6  k get roles --all-namespaces 
+    7  k get kube-proxy -n kube-system
+    8  k get role kube-proxy -n kube-system
+    9  k describe role kube-proxy -n kube-system 
+   10  k get rolebinding kube-proxy -n kube-system
+   11  k describe rolebinding kube-proxy -n kube-system
+   12  k describe rolebindings.rbac.authorization.k8s.io dev-user
+   13  k describe rolebindings dev-user
+   14  k describe rolebindings dev-user -n kube-system
+   15  k get role dev-user
+   16  k get rolebindings
+   17  k get rolebindings --all-namespaces
+   18  k describe rolebindings.rbac.authorization.k8s.io dev-user-binding -n blue
+   19  k describe role dev-user-binding -n blue
+   20  k get roles --all-namespaces
+   21  k describe role developer -n blue
+   22  k create role --help
+   23  k create rolebinding --help
+   24  k create role developer --verb=list --verb=create --verb=delete --resource=pods --dry-run=client -o yaml > developer-role.yaml
+   25  cat developer-role.yaml 
+   26  k apply -f developer-role.yaml 
+   27  k create rolebinding dev-user-binding --role=dev-user --dry-run=client -o yaml > developer-rolebinding.yaml
+   28  k apply -f developer-rolebinding.yaml 
+   29  k get roles
+   30  k get rolebindings.rbac.authorization.k8s.io 
+   31  k delete rolebindings.rbac.authorization.k8s.io dev-user-binding 
+   32  k create rolebinding dev-user-binding --role=developer --dry-run=client -o yaml > developer-rolebinding.yaml 
+   33  k apply -f developer-rolebinding.yaml 
+   34  k get rolebindings.rbac.authorization.k8s.io 
+   35  k delete rolebindings.rbac.authorization.k8s.io dev-user-binding 
+   36  k create rolebinding dev-user-binding --role=developer --user=dev-user --dry-run=client -o yaml > developer-rolebinding.yaml 
+   37  cat developer-rolebinding.yaml 
+   38  k apply -f developer-rolebinding.yaml 
+   39  k get rolebindings.rbac.authorization.k8s.io 
+   40  k get roles -n blue
+   41  k describe role developer -n blue
+   42  k get rolebinding -n blue
+   43  k describe rolebindings.rbac.authorization.k8s.io dev-user-binding -n blue
+   44  k get pods -n blue
+   45  k auth dev can i get pods --as dev-user -n blue
+   46  k auth dev can-i get pods --as dev-user -n blue
+   47  k auth can-i get pods --as dev-user -n blue
+   48  k get user
+   49  k edit role developer -n blue
+   50  k edit rolebindings.rbac.authorization.k8s.io dev-user-binding -n blue
+   51  k edit role developer -n blue
+   52  k auth can-i create deployment --as dev-user -n blue
+   53  k edit rolebindings.rbac.authorization.k8s.io dev-user-binding -n blue
+   54  k edit role developer -n blue
+   55  k auth can-i create deployment --as dev-user -n blue
+   56  k edit role developer -n blue
+   57  k auth can-i create deployment --as dev-user -n blue
+   58  k edit role developer -n blue
+   59  k auth can-i create deployment --as dev-user -n blue
+   60  ls
+   61  cat de
+   62  rm de
+   63  cat dev
+   64  rm  dev
+   65  ls
+   66  cat developer-role.yaml 
+   67  cat developer-rolebinding.yaml 
+   68  clear
+   69  history
