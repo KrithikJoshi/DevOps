@@ -1,0 +1,27 @@
+1  k get sa
+    2  k get sa
+    3  k get deploy
+    4  k describe deployments.apps 
+    5  k get pods
+    6  k describe pods
+    7  k get sa
+    8  k get po -o yaml
+    9  k get po -o yaml | grep account
+   10  k create sa --help
+   11  k create sa dashboard-sa 
+   12  cd /var/rbac/
+   13  ls
+   14  cat dashboard-sa-role-binding.yaml 
+   15  cat pod-reader-role.yaml 
+   16  cd
+   17  k create token dashboard-sa 
+   18  k edit deployments.apps web-dashboard 
+   19  k get deploy
+   20  k edit pod web-dashboard-66d58fc7b8-vmm7r 
+   21  k edit deployments.apps web-dashboard 
+   22  k set sa deploy/web-dashboard dashboard-sa
+   23  k edit deployments.apps web-dashboard 
+   24  k get pod
+   25  k get po
+   26  k create po --help
+   27  history
