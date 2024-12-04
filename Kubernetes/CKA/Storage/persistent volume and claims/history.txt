@@ -1,0 +1,38 @@
+1  k get po
+    2  k exec webapp -- cat /log/app.log
+    3  clea
+    4  clear
+    5  k get p
+    6  k get po
+    7  k get po -o yaml > webapp.yaml
+    8  cat webapp.yaml 
+    9  vim webapp.yaml 
+   10  k apply --force -f webapp.yaml 
+   11  k get po
+   12  k create --help
+   13  k create pv
+   14  vim pv-log.yaml
+   15  k apply -f pv-log.yaml 
+   16  vim clain-log-1.yaml
+   17  mv clain-log-1.yaml claim-log-1.yaml
+   18  cat claim-log-1.yaml 
+   19  k apply -f claim-log-1.yaml 
+   20  k get pvc
+   21  k get pv
+   22  vim claim-log-1.yaml 
+   23  k delete pvc claim-log-1 
+   24  k apply -f claim-log-1.yaml 
+   25  k get pvc
+   26  ls
+   27  cat webapp.yaml 
+   28  vim webapp.yaml 
+   29  k apply --force -f webapp.yaml 
+   1  k get pvc
+    2  k delete pvc claim-log-1 
+    3  k get pvc
+    4  k delete po webapp 
+   30  k get po
+   31  k get pvc
+   32  k get pv
+   33  ls
+   34  history
