@@ -1,0 +1,24 @@
+1  k get po
+    2  k get networkpolicies --help
+    3  k get np
+    4  k api-resources 
+    5  clear
+    6  k get netpol
+    7  k describe netpol payroll-policy 
+    8  k create netpol --help
+    9  internal-policy.yaml
+   10  vim internal-policy.yaml
+   11  cat internal-policy.yaml 
+   12  k apply -f internal-policy.yaml 
+   13  vim internal-policy.yaml
+   14  k apply -f internal-policy.yaml 
+   15  vim internal-policy.yaml
+   16  k apply -f internal-policy.yaml 
+   17  vim internal-policy.yaml
+   18  k apply -f internal-policy.yaml 
+   19  k get svc
+   20  k get svc -n kube-system 
+   21  k get netpol
+   22  cat internal-policy.yaml 
+   23  clear
+   24  history
