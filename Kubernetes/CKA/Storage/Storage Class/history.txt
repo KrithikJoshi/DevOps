@@ -1,0 +1,28 @@
+1  k get sc
+    2  k get sc
+    3  k get sc -o wide
+    4  k get pvc
+    5  ls
+    6  k get pv
+    7  k get pv -o yaml
+    8  vim local-pvc.yaml
+    9  k create -f  local-pvc.yaml 
+   10  k get pvc
+   11  k get sc local-storage -o yaml
+   12  k get pods
+   13  k create po --help
+   14  k run --help
+   15  vim nginx-pod.yaml
+   16  k create -f nginx-pod.yaml 
+   17  vi nginx-pod.yaml 
+   18  k create -f nginx-pod.yaml 
+   19  k get po
+   20  k get pvc
+   21  k delete po mypod 
+   22  vim nginx-pod.yaml 
+   23  k create -f nginx-pod.yaml 
+   24  k get po
+   25  vim delayed-volume-sc.yaml
+   26  k create -f delayed-volume-sc.yaml 
+   27  k get sc
+   28  history
