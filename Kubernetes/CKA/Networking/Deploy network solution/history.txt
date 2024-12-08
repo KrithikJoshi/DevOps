@@ -1,0 +1,7 @@
+ 1  k get po
+    2  k get po -o wide
+    3  k create -f /root/weave/weave-daemonset-k8s.yaml 
+    4  k get po 
+    5  k get po
+    6  cat /root/weave/weave-daemonset-k8s.yaml
+    7  history

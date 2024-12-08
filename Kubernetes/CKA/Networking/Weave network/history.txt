@@ -1,0 +1,26 @@
+ 1  kubectl get pod
+    2  kubectl get pods
+    3  ip route
+    4  history
+    1  k get po
+    2  k get no
+    3  k get cn
+    4  k get cm
+    5  k describe cm
+    6  k describe configmaps 
+    7  k describe nodes -o wide
+    8  k describe nodes node01 
+    9  k get cm -n kube-system 
+   10  k get po -n kube-system
+   11  k describe po -n kube-system weave-net-ljxwd 
+   12  k describe po -n kube-system weave-net-nf8k4 
+   13  k get netpol
+   14  k get netpol -n kube-system 
+   15  ifconfig
+   16  k get node -o wide
+   17  k get po -n kube-system -o wide
+   18  ip addr show weave
+   19  k run po route --help
+   20  k run po route --help | grep node
+   21  ssh node01
+   22  history

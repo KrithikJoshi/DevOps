@@ -1,0 +1,18 @@
+1  iptable
+    2  iptables
+    3  iptables -L -t
+    4  iptables -h
+    5  ip addr
+    6  k get svc
+    7  k get svc -o wide
+    8  cat /etc/kubernetes/manifests/kube-apiserver.yaml 
+    9  cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep cluster-ip-range
+   10  k get po -n kube-system
+   11  k describe po -n kube-system kube-proxy-bwnqt
+   12  k describe po -n kube-system kube-proxy-bwnqt | grep proxy
+   13  k logs kube-proxy-bwnqt -n kube-system 
+   14  k get ds
+   15  k get ds --help
+   16  k get ds -n kube-system 
+   17  ls
+   18  history
