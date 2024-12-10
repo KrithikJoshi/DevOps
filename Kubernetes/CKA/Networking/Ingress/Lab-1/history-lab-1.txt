@@ -1,0 +1,35 @@
+1  k get ingress -A
+    2  k get all -A
+    3  k describe ingress -n app-space ingress-wear-watch 
+    4  k get ingress -n app-space ingress-wear-watch -o
+    5  k get ingress -n app-space ingress-wear-watch -o yaml
+    6  k get ingress -n app-space ingress-wear-watch -o yaml > ingress-wear-watch.yaml
+    7  ls
+    8  vim ingress-wear-watch.yaml 
+    9  k replace --force -f ingress-wear-watch.yaml 
+   10  k get po -A
+   11  vim ingress-wear-watch.yaml 
+   12  k replace --force -f ingress-wear-watch.yaml 
+   13  vim ingress-wear-watch.yaml 
+   14  k replace --force -f ingress-wear-watch.yaml 
+   15  k get po -A
+   16  k get deployments.apps -A
+   17  k create ingress --help
+   18  k get svc -n critical-space 
+   19  kubectl create ingress critical-pay-service --rule="172.20.205.132/pay=pay-service:8282" --namespace=critical-space 
+   20  history
+   21  ls
+   22  cat ingress-wear-watch.yaml 
+   23  cp ingress-wear-watch.yaml critical-pay-service.yaml
+   24  ls
+   25  vim critical-pay-service.yaml 
+   26  ls
+   27  vim critical-pay-service.yaml 
+   28  ls
+   29  k get po -n critical-space 
+   30  k get svc -n critical-space 
+   31  k get svc -n app-space 
+   32  cat ingress-wear-watch.yaml 
+   33  cat critical-pay-service.yaml 
+   34  k apply -f critical-pay-service.yaml 
+   35  history
