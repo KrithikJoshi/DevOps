@@ -1,0 +1,51 @@
+1  k get po -A
+    2  k create namespace ingress-nginx
+    3  k create configmap ingress-nginx-controller -n ingress-nginx 
+    4  k create serviceaccount ingress-nginx -n ingress-nginx 
+    5  k create serviceaccount ingress-nginx-admission -n ingress-nginx 
+    6  k get role 
+    7  k get role -n ingress-nginx 
+    8  k get role -n ingress-nginx -o wide
+    9  k describe role -n ingress-nginx ingress-nginx
+   10  k describe role -n ingress-nginx ingress-nginx-admission 
+   11  k describe rolebindings.rbac.authorization.k8s.io -n ingress-nginx ingress-nginx-admission 
+   12  k describe rolebindings.rbac.authorization.k8s.io -n ingress-nginx ingress-nginx
+   13  ls
+   14  cat ingress-controller.yaml 
+   15  k create -f ingress-controller.yaml 
+   16  vim ingress-controller.yaml 
+   17  k create -f ingress-controller.yaml 
+   18  vim ingress-controller.yaml 
+   19  k create -f ingress-controller.yaml 
+   20  vim ingress-controller.yaml 
+   21  k create -f ingress-controller.yaml 
+   22  vim ingress-controller.yaml 
+   23  k create -f ingress-controller.yaml 
+   24  vim ingress-controller.yaml 
+   25  k create -f ingress-controller.yaml 
+   26  k get ingress -n ingress-nginx 
+   27  rm ingress-controller.yaml 
+   28  vim ingress-controller.yaml
+   29  k create -f ingress-controller.yaml 
+   30  k get deployments.apps -n ingress-nginx 
+   31  k delete deployments.apps -n ingress-nginx ingress-nginx-controller 
+   32  k create -f ingress-controller.yaml 
+   33  k get svc -n ingress-nginx 
+   34  k delete svc -n ingress-nginx ingress-controller 
+   35  k delete deployments.apps -n ingress-nginx ingress-nginx-controller 
+   36  k create -f ingress-controller.yaml 
+   37  k get ingress -n ingress-nginx 
+   38  k get po -n ingress-nginx 
+   39  k get po -A
+   40  k get po -A -o wide
+   41  k get po -n app-space 
+   42  k get po -n app-space -o wide
+   43  k get svc -n app-space -o wide
+   44  k create ingress --help
+   45  kubectl create ingress wear-watch --namespace=app-space   --rule="/wear*=wear-service:8080"   --rule="/watch*=video-service:8080"
+   46  k edit ingress -n app-space wear-watch 
+   47  k apply -f /tmp/kubectl-edit-271033341.yaml
+   48  k edit ingress -n app-space wear-watch 
+   49  vim /tmp/kubectl-edit-271033341.yaml
+   50  k apply -f /tmp/kubectl-edit-271033341.yaml
+   51  history
