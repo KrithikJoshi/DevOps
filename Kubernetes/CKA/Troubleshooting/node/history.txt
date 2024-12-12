@@ -1,0 +1,41 @@
+1  k get nodes
+    2  k describe nodes node01 
+    3  top
+    4  clear
+    5  k get nodes
+    6  k describe nodes node01 
+    7  k describe nodes controlplane 
+    8  df -h
+    9  service kubelet status
+   10  k describe nodes node01 
+   11  journalctl -u kubelet
+   12  ssh node01
+   13  k get nodes
+   14  clear
+   15  k get nodes
+   16  k get events
+   17  k describe nodes node01 
+   18  ssh node01
+   19  top
+   20  df -h
+   21  clear
+   22  journalctl -u kubelet.service 
+   23  clear
+   24  journalctl -u kubelet.service -f
+   25  ssh root@node01
+   26  k get nodes
+   27  k describe nodes node01 
+   28  clear
+   29  journalctl -u kubelet.service 
+   30  celar
+   31  clear
+   32  ssh root@node01
+   33  clear
+   34  k get nodes
+   35  k get nodes -o wide
+   36  k describe nodes node01 
+   37  vim /etc/kubernetes/kubelet.conf 
+   38  ssh root@node01
+   39  k get nodes
+   40  clear
+   41  history
