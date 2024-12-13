@@ -1,0 +1,66 @@
+1  cat q1.json 
+    2  cat q1.json | jpath $.property1
+    3  vim answer1.sh
+    4  clear
+    5  cat q2.json 
+    6  cat q2.json | jpath $.bus
+    7  vim answer2.sh
+    8   clear
+    9  cat q3.json 
+   10  cat q3.json | jpath $.bus.price
+   11  vim answer3.sh
+   12  ./answer3.sh 
+   13  clear
+   14  cat q4.json
+   15  cat q4.json | jpath $.vehicles[0].price
+   16  cat q4.json | jpath $.vehicles.car.price
+   17  cat q4.json | jpath $.car.price
+   18  vim answer4.sh
+   19  ./answer4
+   20  ./answer4.sh
+   21  cat answer4.sh 
+   22  clear
+   23  cat q5.json 
+   24  cat q5.json | jpath $.car.wheels
+   25  vim answer5.sh
+   26  clear
+   27  cat q6.json 
+   28  cat q6.json |jpath $.car.wheels[2]
+   29  vim answer6.sh
+   30  clear
+   31  cat q7.json 
+   32  cat q7.json | jpath $.car.wheels[2].model
+   33  vim answer7.sh
+   34  clear
+   35  cat q8.json
+   36  cat q8.json | jpath $.employee.payslips
+   37  vim answer8.sh
+   38  vim answer8.sh
+   39  clear
+   40  cat q9.json
+   41  cat q9.json | jpath $.employee.payslips[2]
+   42  vim answer9.sh
+   43  cat q10.json 
+   44  cat q10.json | jpath $.employee.payslips[2].amount
+   45  vim answer10.sh
+   46  cat q11.json 
+   47  cat q11.json | jpath $.prizes
+   48* cat q11.json | jpath $.prizes.
+   49  cat q11.json | jpath $.prizes.year
+   52  cat q11.json | jpath $.prizes[5].laureates[1]
+   53  clear
+   54  cat q11.json 
+   55  cat q11.json | jpath $.prizes[5].laureates[1]
+   56  vim answer11.sh
+   57  clear
+   58  cat q12.json 
+   59  cat q12.json | jpath $.[@==car]
+   60  cat q12.json | jpath $[0]
+   61  vim answer12.sh
+   62  clear
+   63  cat q13.json 
+   64  cat q13.json | jpath $[0] | jpath $[1]
+   65  cat q13.json | jpath $[0]
+   66  cat q13.json | jpath $[0,3]
+   67  cat q13.json | jpath '$[0,3]'
+   68  vim answer13.sh
