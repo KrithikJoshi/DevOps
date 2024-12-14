@@ -1,0 +1,47 @@
+cat q1.json | jpath $.*
+cat q2.json | jpath $.*.color
+cat q3.json | jpath $.*.*.price
+cat q4.json | jpath $.*.model
+ cat q5.json | jpath $.car.wheels[*].model
+cat q6.json | jpath $.*.wheels[*].model
+cat q7.json | jpath $.employee.payslips[*].amount
+cat q8.json | jpath $.prizes[*].laureates[*].firstname
+cat q9.json | jpath $.prizes[5].laureates[*].firstname
+ 1  ls
+    2  cat q4.json | jpath $.*.model
+    3  vim answer4.sh
+    4  cat q5.json 
+    5  cat q5.json | jpath $.car
+    6  cat q5.json | jpath $.car.wheels
+    7  cat q5.json | jpath $.car.wheels[*]
+    8  cat q5.json | jpath $.car.wheels[*].model
+    9  vim answer5.json
+   10  mv answer5.json answer5.sh
+   11  clear
+   12  cat q6.json 
+   13  cat q6.json | jpath $.*
+   14  cat q6.json | jpath $.*.wheels
+   15  cat q6.json | jpath $.*.wheels[*]
+   16  cat q6.json | jpath $.*.wheels[*].model
+   17  vim answer6.sh
+   18  cat q7.json 
+   19  cat q7.json | jpath $.employee.payslips
+   20  cat q7.json | jpath $.employee.payslips[*]
+   21  cat q7.json | jpath $.employee.payslips[*].amount
+   22  vim answer7.sh
+   23  clear
+   24  cat q8.json 
+   25  cat q8.json | jpath $.prizes[0]
+   26  cat q8.json | jpath $.prizes[0].laureates[0]
+   27  cat q8.json | jpath $.prizes[0].laureates[0].firstname
+   28  cat q8.json | jpath $.prizes[*].laureates[0].firstname
+   29  cat q8.json | jpath $.prizes[*].laureates[*].firstname
+   30  vim answer8.sh
+   31  cat q9.json 
+   32  cat q9.json | jpath $.prizes[5]
+   33  cat q9.json | jpath $.prizes[5].laureates[*]
+   34  cat q9.json | jpath $.prizes[5].laureates[*].firstname
+   35  vim answer9.sh
+   36  cat answer1.sh answer2.sh answer3.sh 
+   37  cat answer1.sh answer2.sh answer3.sh answer4.sh answer5.sh answer6.sh answer7.sh answer8.sh answer9.sh 
+   38  history
