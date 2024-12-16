@@ -1,0 +1,58 @@
+1  k get pods
+    2  kubectl get pods
+    3  cat input.json 
+    4  cat input.json | jpath $.kind
+    5  vim answer9.sh
+    6  cat input.json 
+    7  cat input.json | jpath $.metadata.name
+    8  vim answer10.sh
+    9  cat input.json | jpath $.spec.containers
+   10  cat input.json | jpath $.spec.nodename
+   11  cat input.json | jpath $.spec.nodeName
+   12  vim answer11.sh
+   13  clear
+   14  cat input.json 
+   15  cat input.json | jpath $.spec.containers
+   16  vim answer12.sh
+   17  cat input.json | jpath $.spec.containers.image
+   18  cat input.json | jpath $.spec.containers[0]
+   19  cat input.json | jpath $.spec.containers[0].image
+   20  vim answer13.sh
+   21  cat input.json 
+   22  ls
+   23  cat k8status.json 
+   24  cat k8status.json | jpath $.phase
+   25  cat k8status.json | jpath $.spec
+   26  cat k8status.json | jpath $.state
+   27  cat k8status.json | jpath $.status[1]
+   28  cat k8status.json | jpath $.status
+   29  cat k8status.json | jpath $.status.containerStatuses
+   30  cat k8status.json | jpath $.status.phase
+   31  vim answer14.sh
+   32  cat k8status.json | jpath $.status.containerStatuses.waiting
+   33  cat k8status.json | jpath $.status.containerStatuses.state.waiting
+   34  cat k8status.json | jpath $.status.containerStatuses.state[0]
+   35  cat k8status.json | jpath $.status.containerStatuses.state
+   36  cat k8status.json | jpath $.status.containerStatuses[0]
+   37  cat k8status.json | jpath $.status.containerStatuses[0].state
+   38  cat k8status.json | jpath $.status.containerStatuses[0].state.waiting
+   39  cat k8status.json | jpath $.status.containerStatuses[0].state.waiting[0]
+   40  cat k8status.json | jpath $.status.containerStatuses[0].state.waiting.reason
+   41  vim answer15.sh
+   42  cat k8status.json | jpath $.status.containerStatuses[1]
+   43  cat k8status.json | jpath $.status.containerStatuses[1].restartCount
+   44  vim answer16.sh
+   45  cat podslist.json 
+   46  cat podslist.json | jpath $.metadata
+   47  cat podslist.json | jpath '$[0]'
+   48  cat podslist.json | jpath '$[*]'
+   49  cat podslist.json | jpath '$[*]'.metadata
+   50  cat podslist.json | jpath '$[*]'.metadata.name
+   51  vim answer17.sh
+   52  cat userslist.json 
+   53  cat userslist.json | jpath $.users
+   54  cat userslist.json | jpath $.users[0]
+   55  cat userslist.json | jpath $.users[*].name
+   56  vim answer18.sh
+   57  clear
+   58  history
