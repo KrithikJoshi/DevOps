@@ -1,0 +1,70 @@
+1  k get nodes
+    2  k get nodes -o json
+    3  k get nodes -o json > /opt/outputs/nodes.json
+    4  k get node node01 -o json > /opt/outputs/node01.json
+    5  k get nodes -o=jsonpath{.name[*]}
+    6  k get nodes -o jsonpath{.name[*]}
+    7  k get nodes -o jsonpath --help
+    8  k get nodes -o=jsonpath --help
+    9  kubectl get nodes -o=jsonpath='{.items[0]}'
+   10  kubectl get nodes -o=jsonpath='{.items[0].name}'
+   11  kubectl get nodes -o=jsonpath='{.items[0].name[0]}'
+   12  kubectl get nodes -o=jsonpath='{.items[0].metadata}'
+   13  kubectl get nodes -o=jsonpath='{.items[0].metadata.name}'
+   14  kubectl get nodes -o=jsonpath='{.items[*].metadata.name}'
+   15  kubectl get nodes -o=custom-columns=NODE:.metadata.name
+   16  kubectl get nodes -o=jsonpath='{.items[*].metadata.name}' > /opt/outputs/node_names.txt
+   17  k describe nodes controlplane 
+   18  kubectl get nodes -o=jsonpath='{.items[*].status}'
+   19  kubectl get nodes -o=jsonpath='{.items[*].status.nodeInfo}'
+   20  kubectl get nodes -o=jsonpath='{.items[*].status.nodeInfo.osImage}'
+   21  kubectl get nodes -o=custom-columns=NODE:.status.nodeInfo.osImage
+   22  kubectl get nodes -o=jsonpath='{.items[*].status.nodeInfo.osImage}' > /opt/outputs/nodes_os.txt
+   23  kubectl config view --kubeconfig=/root/my-kube-config
+   24  kubectl config view --kubeconfig=/root/my-kube-config --help
+   25  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath
+   26  kubectl config view --kubeconfig=/root/my-kube-config -o json
+   27  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath'{.users[0]}'
+   28  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath'{.items[*].users[0]}'
+   29  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath"{.users[0]}"
+   30  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath"{.users[*]}"
+   31  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.users[*]}"
+   32  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.users[*].name}"
+   33  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.users[*].name}" > /opt/outputs/users.txt
+   34  clear
+   35  kubectl get nodes --sort-by=.metadata.name
+   36  kubectl get pv --sort-by=.metadata.name
+   37  kubectl get pv --sort-by=.capacity
+   38  kubectl get pv -o json
+   39  kubectl get pv -o jsonpath='{.items[0]}'
+   40  kubectl get pv -o jsonpath='{.items[0].spec}'
+   41  kubectl get pv -o jsonpath='{.items[0].spec.capacity}'
+   42  kubectl get pv -o jsonpath='{.items[0].spec.capacity.storage}'
+   43  kubectl get pv -o jsonpath='{.items[*].spec.capacity.storage}'
+   44  kubectl get pv --sort-by=.items[*].spec.capacity.storage
+   45  kubectl get pv --sort-by=.items
+   46  kubectl get pv --sort-by=.capacity
+   47  kubectl get pv --sort-by=.metadata
+   48  kubectl get pv --sort-by=.spec
+   49  kubectl get pv --sort-by=.spec.capacity
+   50  kubectl get pv --sort-by=.spec.capacity.storage
+   51  kubectl get pv --sort-by=.spec.capacity.storage > /opt/outputs/storage-capacity-sorted.txt
+   52  clear
+   53  kubectl get pv -o=custom-columns=NAME:.spec.capacity.storage
+   54  kubectl get pv -o=custom-columns=NAME:.metadata.name
+   55  kubectl get pv -o=custom-columns=NAME:.metadata.name ,CAPACITY:.spec.capacity.storage
+   56  k get pv
+   57  kubectl get pv -o=custom-columns=NAME:.metadata.name ,CAPACITY:.spec.capacity
+   58  kubectl get pv -o=custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity
+   59  kubectl get pv -o=custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity > /opt/outputs/pv-and-capacity-sorted.txt
+   60  kubectl get pv -o=custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity.storage
+   61  kubectl get pv -o=custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity.storage > /opt/outputs/pv-and-capacity-sorted.txt
+   62  k get pv --sort-by=.spec.capacity.storage -o=custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity.storage
+   63  k get pv --sort-by=.spec.capacity.storage -o=custom-columns=NAME:.metadata.name,CAPACITY:.spec.capacity.storage > /opt/outputs/pv-and-capacity-sorted.txt
+   64  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.users[*]}" 
+   65  kubectl config view --kubeconfig=/root/my-kube-config -o json 
+   66  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.users[0]}" 
+   67  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.contexts[0]}" 
+   68  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.contexts[0]}" > /opt/outputs/aws-context-name
+   69  clear
+   70  history
