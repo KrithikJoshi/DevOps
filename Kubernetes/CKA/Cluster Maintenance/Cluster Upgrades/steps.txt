@@ -1,3 +1,5 @@
+Note -  Step 1 is mandatory step whether it is for upgrading controlplane or worker node
+// Step 1-6 These steps are for upgrading kubeadm
 Step 1 -
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
@@ -5,7 +7,7 @@ curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --
 
 //copy these 2 command in worker node and controlplane node
 
-Step 2 - Determine which version to upgrade to 
+Step 2 - Determine which version to upgrade 
 
 sudo apt update
 sudo apt-cache madison kubeadm
@@ -25,17 +27,27 @@ sudo kubeadm upgrade plan
 Step 6 - 
 sudo kubeadm upgrade apply v1.31.0
 
-Step 7 - Drain the node
+// Step 7-9 These steps are for upgrading kubelet and kubectl
+Step 7 - Drain the node // If already drained not required
 kubectl drain controlplane --ignore-daemonsets
 
-Step 8 - upgrade
+Step 8 - upgrade kubelet and kubectl 
 sudo apt-mark unhold kubelet kubectl && \
-sudo apt-get update && sudo apt-get install -y kubelet='1.31.0-1.1' kubectl='1.31.0-1.1 ' && \
+sudo apt-get update && sudo apt-get install -y kubelet='1.31.0-1.1' kubectl='1.31.0-1.1' && \
 sudo apt-mark hold kubelet kubectl
 
-Step 9 - restart the kubelet
+Step 9 - restart the kubelet 
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 
 Step 10 - Uncordon the node
 kubectl uncordon controlplane
+
+//Upgrading Worker Nodes
+Step 11 - Same as Step 1
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+Step 12 - 
+
