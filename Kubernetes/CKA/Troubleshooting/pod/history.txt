@@ -1,0 +1,103 @@
+1  k get pods 
+    2  k get pods -n alpha 
+    3  k describe -n alpha pod mysql 
+    4  k describe -n alpha pod webapp-mysql-78fd9544f6-7j85r 
+    5  k logs -n alpha webapp-mysql-78fd9544f6-7j85r 
+    6  k logs -n alpha -f webapp-mysql-78fd9544f6-7j85r 
+    7  k logs -n alpha -f mysql 
+    8  k logs -n alpha mysql 
+    9  clear
+   10  k describe -n alpha pod webapp-mysql-78fd9544f6-7j85r 
+   11  k get secrets 
+   12  k get secrets -n alpha 
+   13  k describe -n alpha pod mysql 
+   14  k logs -n alpha webapp-mysql-78fd9544f6-7j85r 
+   15  k logs -n alpha webapp-mysql-78fd9544f6-7j85r --previous 
+   16  k get pods -n alpha 
+   17  k logs -n alpha webapp-mysql --previous 
+   18  k logs webapp-mysql --previous 
+   19  clear
+   20  k get svc
+   21  k get svc -n alpha 
+   22  k get svc -n alpha mysql -o yaml > mysql-service.yaml
+   23  ls
+   24  vim mysql-service.yaml 
+   25  k apply -f mysql-service.yaml 
+   26  k create service --help
+   27  k create service clusterip --help
+   28  kubectl create service clusterip mysql-service --tcp=3306:8080
+   29  k get svc 
+   30  k delete svc mysql-service 
+   31  kubectl create service clusterip mysql-service --tcp=3306:8080 -n alpha 
+   32  k get svc -n alpha 
+   33  k delete svc -n alpha mysql
+   34  k delete svc -n alpha mysql-service 
+   35  kubectl create service clusterip mysql-service --tcp=3306:8080 -n alpha 
+   36  k get svc -n alpha 
+   37  vim mysql-service.yaml 
+   38  k delete svc -n alpha mysql-service 
+   39  k apply -f mysql-service.yaml 
+   40  k get svc -n alpha 
+   41  clear
+   42  k get pods -n beta 
+   43  k logs -n beta webapp-mysql-78fd9544f6-vqgx8 
+   44  k logs -n beta webapp-mysql-78fd9544f6-vqgx8 -f
+   45  k logs -n beta webapp-mysql-78fd9544f6-vqgx8 --previous 
+   46  k get svc -n beta 
+   47  k describe pods -n beta webapp-mysql-78fd9544f6-vqgx8 
+   48  k describe pods -n beta mysql 
+   49  k describe -n beta svc mysql-service 
+   50  k describe -n beta svc web-service 
+   51  k edit -n beta svc web-service 
+   52  k edit -n beta svc mysql-service 
+   53  k edit -n beta svc mysql-service 
+   54  k describe pods -n beta webapp-mysql-78fd9544f6-vqgx8 
+   55  clear
+   56  k get pods -n gamma 
+   57  k get svc -n gamma 
+   58  k logs -n gamma webapp-mysql-78fd9544f6-vd8pc 
+   59  k describe svc -n gamma mysql-service 
+   60  k describe svc -n gamma web-service 
+   61  k describe pods -n gamma mysql 
+   62  k describe pods -n gamma webapp-mysql-78fd9544f6-vd8pc 
+   63  k edit svc -n gamma mysql-service 
+   64  clear
+   65  k get pods -n delta 
+   66  k get svc -n delta 
+   67  k describe -n delta pod webapp-mysql-b9c9f7fbd-hbn5w 
+   68  k edit -n delta pod webapp-mysql-b9c9f7fbd-hbn5w 
+   69  k apply --force -f /tmp/kubectl-edit-3451397116.yaml
+   70  k get pods -n delta 
+   71  k describe -n delta pod mysql 
+   72  k describe -n delta pod webapp-mysql-b9c9f7fbd-klh97 
+   73  k get pods 
+   74  k get pods -n delta 
+   75  k edit -n delta pod webapp-mysql-b9c9f7fbd-klh97 
+   76  vim /tmp/kubectl-edit-3211414684.yaml
+   77  k apply --force -f /tmp/kubectl-edit-3211414684.yaml
+   78  k describe pod -n delta webapp-mysql-b9c9f7fbd-svfg8 
+   79  k get deployments.apps -n delta 
+   80  k edit deployments.apps -n delta webapp-mysql 
+   81  clear
+   82  k get pods -n epsilon 
+   83  k get deployments.apps -n epsilon 
+   84  k describe deployments.apps -n epsilon webapp-mysql 
+   85  k edit deployments.apps -n epsilon webapp-mysql 
+   86  k get pods -n epsilon 
+   87  k describe pods -n epsilon mysql 
+   88  k edit pods -n epsilon mysql 
+   89  k apply --force -f /tmp/kubectl-edit-3011827233.yaml
+   90  clear
+   91  k get pods -n zeta 
+   92  k get deployments.apps -n zeta 
+   93  k describe deployments.apps -n zeta 
+   94  k edit deployments.apps -n zeta 
+   95  k get pods -n zeta
+   96  k describe pods -n zeta webapp-mysql-78fd9544f6-76h5x 
+   97  k describe pods -n zeta mysql 
+   98  k edit -n zeta pod mysql 
+   99  k apply --force -f /tmp/kubectl-edit-741901122.yaml
+  100  k get svc -n zeta 
+  101  k edit svc -n zeta web-service 
+  102  clear
+  103  history
