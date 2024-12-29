@@ -67,4 +67,4 @@
    67  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.contexts[0]}" 
    68  kubectl config view --kubeconfig=/root/my-kube-config -o jsonpath="{.contexts[0]}" > /opt/outputs/aws-context-name
    69  clear
-   70  history
+   70  history  
