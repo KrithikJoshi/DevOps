@@ -103,4 +103,32 @@ Check the service running
 ps -aux | grep kube-controller-manager
 ```
 
+# Kube Scheduler
+
+- The kube-scheduler is only responsible for deciding which pod goes on which node.
+- It does'nt actually place the pods on the nodes that's the job of `Kubelet` .
+- To Schedule the pods on the nodes there mainly 2 stages to decide the node:-
+   - Filtering
+   - Ranking
+
+ Command to view the kube scheduler
+ ```
+kubectl get pod -n kube-system kube-scheduler
+```
+
+Describe the kube scheduler
+```
+kubectl describe pod -n kube-system kube-scheduler
+```
+Manifest File of the kube scheduler
+```
+cat /etc/kubernetes/manifests/kube-scheduler.yaml
+```
+Check the kube-scheduler process
+
+```
+ps-aux | grep kube-scheduler
+```
+
+
 
