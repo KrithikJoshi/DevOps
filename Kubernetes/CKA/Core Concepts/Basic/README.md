@@ -31,5 +31,14 @@ crictl logs <image name>
 crictl pods
 crictl images
 ```
+# ETCD:
+ - ETCD is a distributed reliable key-value store that is simple, secure & Fast.
+ - The ETCD Datastore stores information regarding the cluster such as Nodes, PODS, Configs, Secrets, Accounts, Roles, Bindings and Others.
+ - Every information retrieved through **`kubectl get`** is retrieved from etcd cluster.
 
+Important in ETCD Cluster is ETCD Backup. 
+
+Documentation steps for Backing up ETCD cluster:
+- https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster
+  
 
