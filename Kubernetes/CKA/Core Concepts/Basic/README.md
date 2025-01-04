@@ -129,6 +129,34 @@ Check the kube-scheduler process
 ```
 ps-aux | grep kube-scheduler
 ```
+# Kubelet
+
+- Kubelet creates the pods on the nodes which is decided by the `kube-scheduler`.
+- Kubelet is the component which is present in each Worker Node.
+
+View the kubelet process running
+```
+ps -aux | grep kubelet
+
+```
+# Kube Proxy
+
+- The Kubernetes network proxy runs on each node.
+- This reflects services as defined in the Kubernetes API on each node and can do simple TCP, UDP, and SCTP stream forwarding or round robin TCP, UDP, and SCTP forwarding across a set of backends.
+
+View the kube-proxy
+```
+kubectl get pod -n kube-system kube-proxy
+```
+Describe the kube-proxy service
+```
+kubectl describe pod -n kube-system kube-proxy
+```
+Daemonset of kube-proxy
+```
+kubectl get daemonset -n kube-proxy
+```
+
 
 
 
