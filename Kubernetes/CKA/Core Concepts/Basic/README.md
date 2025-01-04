@@ -64,4 +64,43 @@ Check the kube-apiserver process
 ```
 ps-aux | grep kube-apiserver
 ```
+# Kube Controller Manager
+
+In kubernetes terms, a controller is a process that continuously monitors the state of the components within the system and works towards bringing the whole system to the desired functioning state.
+
+Types of Controller:-
+- `Node Controller` :- Monitors the nodes and takes the necessary action.
+- `Replication Controller`:- monitoring the status of replicasets and ensuring that the desired number of pods are available at all time within the set.
+- `ReplicaSet`
+- `Deployment Controller`
+- `Namespace Controller`
+- `Replication Controller`
+- `Cron Job`
+- `Service Account Controller`
+
+Command to view kube-controller-manager
+```
+kubectl get pod -n kube-system kube-controller-manager
+```
+
+Describe the kube-controller-manager
+```
+kubectl describe pod -n kube-system kube-controller-manager
+```
+
+Manifest file of kube-controller-manager
+```
+cat /etc/kubernetes/manifests/kube-controller-manager.yaml
+```
+Inspect kube-controller-manager service manually
+
+```
+cat /etc/systemd/system/kube-controller-manager.service
+```
+Check the service running
+
+```
+ps -aux | grep kube-controller-manager
+```
+
 
