@@ -44,4 +44,24 @@ ETCDCTL_API=3 etcdctl --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kube
 Documentation steps for Backing up ETCD cluster:
 - https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster
 
+# Kube-apiserver
+
+Kube-apiserver is responsible for `authenticating`, `validating requests`, `retrieving` and `Updating data` in ETCD key-value store. In fact kube-apiserver is the only component that interacts directly to the etcd datastore. The other components such as `kube-scheduler`, `kube-controller-manager` and `kubelet` uses the API-Server to update in the cluster in their respective areas.
+
+Commands that describe the kube-apiserver:
+```
+kubectl get pods -n kube-system kube-apiserver
+```
+Description of the kube-apiserver pod:
+```
+kubectl describe pod -n kube-system kube-apiserver
+```
+Location of manifest file of kube-apiserver:
+```
+cat /etc/kubernetes/manifests/kube-apiserver.yaml
+```
+Check the kube-apiserver process
+```
+ps-aux | grep kube-apiserver
+```
 
