@@ -1,0 +1,31 @@
+1  cat /tmp/resolv.conf 
+    2  cat /home/bob/playbooks/playbook.yaml 
+    3  vim /home/bob/playbooks/playbook.yaml 
+    4  ansible-playbook 
+    5  clear
+    6  cat /home/bob/playbooks/playbook.yaml 
+    7  vim /home/bob/playbooks/playbook.yaml 
+    8  clear
+    9  cat /home/bob/playbooks/playbook.yaml 
+   10  vim /home/bob/playbooks/playbook.yaml 
+   11  ls /home/bob/playbooks/
+   12  cat /home/bob/playbooks/inventory 
+   13  vim /home/bob/playbooks/playbook.yaml 
+   14  vim /home/bob/playbooks/app_install.yaml 
+   15  cat /home/bob/playbooks/a
+   16  cat /home/bob/playbooks/app_install.yaml 
+   17  vim /home/bob/playbooks/app_install.yaml 
+   18  ansible-playbook -i 
+   19  cd /home/bob/playbooks/
+   20  ls
+   21  ansible-playbook -i inventory app_install.yaml 
+   22  cat inventory 
+   23  vim user_setup.yaml 
+   24  ansible-playbook -i inventory user_setup.yaml 
+   25  vim user_setup.yaml 
+   26  cat user_setup.yaml 
+   27  cat inventory 
+   28  vim user_setup.yaml 
+   29  history
+   30  ansible-playbook -i inventory user_setup.yaml 
+   31  history
