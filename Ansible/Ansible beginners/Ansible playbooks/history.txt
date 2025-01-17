@@ -1,0 +1,31 @@
+ 1  vim /home/bob/playbooks/playbook.yaml 
+    2  cd /home/bob/playbooks/
+    3  ansible-playbook playbook.yaml --check
+    4  ansible-playbook playbook.yaml --diff --check
+    5  vim playbook.yaml 
+    6  ansible-playbook playbook.yaml --diff --check
+    7  vim playbook.yaml 
+    8  ansible-playbook playbook.yaml --diff --check
+    9  vim playbook.yaml 
+   10  ansible-playbook playbook.yaml --diff --check
+   11  ansible-playbook -i inventory playbook.yaml 
+   12  vim playbook.yaml 
+   13  ansible-playbook -i inventory playbook.yaml 
+   14  clear
+   15  vim playbook.yaml 
+   16  ansible-playbook -i inventory playbook.yaml 
+   17  vim playbook.yaml 
+   18  ansible-playbook -i inventory playbook.yaml --check
+   19  ansible-playbook -i inventory playbook.yaml 
+   20  vim inventory 
+   21  vim playbook.yaml 
+   22  ansible-playbook -i inventory playbook.yaml --check
+   23  ansible-playbook -i inventory playbook.yaml 
+   24  vim inventory 
+   25  vim playbook.yaml 
+   26  ansible-playbook -i inventory playbook.yaml --check
+   27  ansible-playbook -i inventory playbook.yaml 
+   28  vim playbook.yaml 
+   29  ansible-playbook -i inventory playbook.yaml --check
+   30  ansible-playbook -i inventory playbook.yaml 
+   31  history
